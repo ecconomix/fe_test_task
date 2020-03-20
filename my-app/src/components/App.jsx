@@ -9,10 +9,12 @@ class App extends React.Component {
         <header className={theme.header}>
           Simple Ag-grid table
         </header> 
+        
         <section className={theme.buttonContainer}>
-        <button className={theme.button}>Fetch data</button>
-        <button className={theme.button}>Clear data</button>
+          <button className={theme.button}>Fetch data</button>
+          <button className={theme.button}>Clear data</button>
         </section>
+
         <section className={theme.gridContainer}>
           <Grid />
         </section>
