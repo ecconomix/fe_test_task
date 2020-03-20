@@ -1,5 +1,5 @@
 const initialState = {
-  rawData: null
+  rowData: []
 };
 
 const rootReducer = (state = initialState, action) => {
