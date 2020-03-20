@@ -1,4 +1,4 @@
 # fe_test_task
 
-To run the project run:
+To run the project type:
 > yarn start
