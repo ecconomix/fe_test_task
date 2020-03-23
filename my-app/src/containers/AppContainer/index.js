@@ -1,3 +1,14 @@
+import { connect } from 'react-redux';
 import App from '../../components/App.jsx';
+import { fetchDataPending, clearData } from '../../actionCreators';
 
-export default App;
+const mapStateToProps = (state) => ({
+  loading: state.loading,
+})
+
+const mapDispatchToProps = {
+  fetchData: fetchDataPending,
+  clearData,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
