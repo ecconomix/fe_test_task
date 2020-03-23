@@ -1,8 +1,13 @@
 import React from 'react';
-import Grid from './Grid/index.jsx';
+import Grid from '../containers/GridContainer/index.js';
 import theme from './app.module.css';
 
 class App extends React.Component {
+  fetchData = () => {
+    if (this.props.loading) return;
+    this.props.fetchData();
+  }
+
   render() {
     return (
       <div className={theme.appContainer}>
@@ -11,8 +16,8 @@ class App extends React.Component {
         </header> 
         
         <section className={theme.buttonContainer}>
-          <button className={theme.button}>Fetch data</button>
-          <button className={theme.button}>Clear data</button>
+          <button className={theme.button} onClick={this.fetchData}>Fetch data</button>
+          <button className={theme.button} onClick={() => { this.props.clearData() }}>Clear data</button>
         </section>
 
         <section className={theme.gridContainer}>
